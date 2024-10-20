@@ -4,6 +4,7 @@
 #define BLUE 3
 #define GREEN 5
 #define RED 6
+#define DELAY_TIME 5 // fading time between colors
 
 // define global variables
 int redValue;
@@ -23,7 +24,6 @@ void setup() {
 
 // main loop
 void loop() {
-    #define delayTime 10 // fading time between colors
     char buffer[18];
 
     // reset values
@@ -38,7 +38,7 @@ void loop() {
         greenValue += 1;
         analogWrite(RED, redValue);
         analogWrite(GREEN, greenValue);
-        delay(delayTime);
+        delay(DELAY_TIME);
     }
 
     sprintf(buffer, "r=%d,g=%d,b=%d", redValue, greenValue, blueValue);
@@ -48,7 +48,7 @@ void loop() {
         blueValue += 1;
         analogWrite(GREEN, greenValue);
         analogWrite(BLUE, blueValue);
-        delay(delayTime);
+        delay(DELAY_TIME);
     }
 
     sprintf(buffer, "r=%d,g=%d,b=%d", redValue, greenValue, blueValue);
@@ -58,6 +58,6 @@ void loop() {
         redValue += 1;
         analogWrite(BLUE, blueValue);
         analogWrite(RED, redValue);
-        delay(delayTime);
+        delay(DELAY_TIME);
     }
 }
