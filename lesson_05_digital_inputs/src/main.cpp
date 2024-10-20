@@ -1,22 +1,23 @@
 #include <Arduino.h>
 
-int ledPin = 5;
-int buttonApin = 9;
-int buttonBpin = 8;
+// define pin constants
+#define LED 5
+#define BUTTON_A 9
+#define BUTTON_B 8
 
 byte leds = 0;
 
 void setup() {
-    pinMode(ledPin, OUTPUT);
-    pinMode(buttonApin, INPUT_PULLUP);
-    pinMode(buttonBpin, INPUT_PULLUP);
+    pinMode(LED, OUTPUT);
+    pinMode(BUTTON_A, INPUT_PULLUP);
+    pinMode(BUTTON_B, INPUT_PULLUP);
 }
 
 void loop() {
-    if (digitalRead(buttonApin) == LOW) {
-        digitalWrite(ledPin, HIGH);
+    if (digitalRead(BUTTON_A) == LOW) {
+        digitalWrite(LED, HIGH);
     }
-    if (digitalRead(buttonBpin) == LOW) {
-        digitalWrite(ledPin, LOW);
+    if (digitalRead(BUTTON_B) == LOW) {
+        digitalWrite(LED, LOW);
     }
 }
