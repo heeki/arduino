@@ -1,19 +1,19 @@
 #include <Arduino.h>
 
-//the pin of the active buzzer
-int buzzer = 12;
+// define pin constants
+#define BUZZER 12
 
 void setup() {
-    pinMode(buzzer, OUTPUT); //initialize the buzzer pin as an output
+    pinMode(BUZZER, OUTPUT); // initialize the buzzer pin as an output
 }
 
 void loop() {
     unsigned char i;
     while(1) {
         for(i=0; i<100; i++) {
-            digitalWrite(buzzer, HIGH);
+            digitalWrite(BUZZER, HIGH);
             delay(200);
-            digitalWrite(buzzer, LOW);
+            digitalWrite(BUZZER, LOW);
             delay(200);
         }
     }
