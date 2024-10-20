@@ -1,9 +1,9 @@
 #include <Arduino.h>
 
-const int ledPin = 13;
+const int LED = 13;
 
 void setup() {
-    pinMode(ledPin, OUTPUT);
+    pinMode(LED, OUTPUT);
     pinMode(2, INPUT);
     digitalWrite(2, HIGH);
 }
@@ -11,8 +11,8 @@ void setup() {
 void loop() {
     int value = digitalRead(2);
     if (value == HIGH) {
-        digitalWrite(ledPin, LOW);
+        digitalWrite(LED, LOW);
     } else {
-        digitalWrite(ledPin, HIGH);
+        digitalWrite(LED, HIGH);
     }
 }
