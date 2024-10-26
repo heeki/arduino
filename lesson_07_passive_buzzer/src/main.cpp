@@ -1,6 +1,6 @@
 #include <Arduino.h>
 
-//reference: https://github.com/hibit-dev/buzzer/tree/master/src
+// reference: https://github.com/hibit-dev/buzzer/tree/master/src
 // #include "games/mario_bros.h"
 // #include "games/tetris.h"
 // #include "games/pacman.h"
@@ -11,6 +11,7 @@
 // #include "movies/star_wars.h"
 // #include "songs/its_a_small_world.h"
 
+// define pin constants
 #define BUZZER_PIN 8
 
 void setup() {

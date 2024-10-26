@@ -1,9 +1,10 @@
 #include <Arduino.h>
 
-const int LED = 13;
+// define pin constants
+#define LED_PIN 13
 
 void setup() {
-    pinMode(LED, OUTPUT);
+    pinMode(LED_PIN, OUTPUT);
     pinMode(2, INPUT);
     digitalWrite(2, HIGH);
 }
@@ -11,8 +12,8 @@ void setup() {
 void loop() {
     int value = digitalRead(2);
     if (value == HIGH) {
-        digitalWrite(LED, LOW);
+        digitalWrite(LED_PIN, LOW);
     } else {
-        digitalWrite(LED, HIGH);
+        digitalWrite(LED_PIN, HIGH);
     }
 }

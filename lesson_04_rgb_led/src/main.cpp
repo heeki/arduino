@@ -1,9 +1,9 @@
 #include <Arduino.h>
 
 // define pin constants
-#define BLUE 3
-#define GREEN 5
-#define RED 6
+#define RED_PIN 6
+#define GREEN_PIN 5
+#define BLUE_PIN 3
 #define DELAY_TIME 5 // fading time between colors
 
 // define global variables
@@ -14,12 +14,12 @@ int blueValue;
 void setup() {
     Serial.begin(9600);
     Serial.println();
-    pinMode(RED, OUTPUT);
-    pinMode(GREEN, OUTPUT);
-    pinMode(BLUE, OUTPUT);
-    digitalWrite(RED, HIGH);
-    digitalWrite(GREEN, LOW);
-    digitalWrite(BLUE, LOW);
+    pinMode(RED_PIN, OUTPUT);
+    pinMode(GREEN_PIN, OUTPUT);
+    pinMode(BLUE_PIN, OUTPUT);
+    digitalWrite(RED_PIN, HIGH);
+    digitalWrite(GREEN_PIN, LOW);
+    digitalWrite(BLUE_PIN, LOW);
 }
 
 // main loop
@@ -36,8 +36,8 @@ void loop() {
     for(int i = 0; i < 255; i += 1) {
         redValue -= 1;
         greenValue += 1;
-        analogWrite(RED, redValue);
-        analogWrite(GREEN, greenValue);
+        analogWrite(RED_PIN, redValue);
+        analogWrite(GREEN_PIN, greenValue);
         delay(DELAY_TIME);
     }
 
@@ -46,8 +46,8 @@ void loop() {
     for(int i = 0; i < 255; i += 1) {
         greenValue -= 1;
         blueValue += 1;
-        analogWrite(GREEN, greenValue);
-        analogWrite(BLUE, blueValue);
+        analogWrite(GREEN_PIN, greenValue);
+        analogWrite(BLUE_PIN, blueValue);
         delay(DELAY_TIME);
     }
 
@@ -56,8 +56,8 @@ void loop() {
     for(int i = 0; i < 255; i += 1) {
         blueValue -= 1;
         redValue += 1;
-        analogWrite(BLUE, blueValue);
-        analogWrite(RED, redValue);
+        analogWrite(BLUE_PIN, blueValue);
+        analogWrite(RED_PIN, redValue);
         delay(DELAY_TIME);
     }
 }
