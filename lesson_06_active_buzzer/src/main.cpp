@@ -8,13 +8,10 @@ void setup() {
 }
 
 void loop() {
-    unsigned char i;
-    while(1) {
-        for(i=0; i<100; i++) {
-            digitalWrite(BUZZER_PIN, HIGH);
-            delay(200);
-            digitalWrite(BUZZER_PIN, LOW);
-            delay(200);
-        }
+    for (int i=0; i<100; i++) {
+        digitalWrite(BUZZER_PIN, HIGH);
+        delay(1000);
+        digitalWrite(BUZZER_PIN, LOW);
+        delay(1000);
     }
 }
