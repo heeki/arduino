@@ -7,7 +7,8 @@
 
 // define variables
 SR04 sr04 = SR04(ECHO_PIN, TRIG_PIN);
-long dist;
+long dist_cm;
+float dist_inch;
 
 void setup() {
     Serial.begin(9600);
@@ -16,10 +17,13 @@ void setup() {
 }
 
 void loop() {
-    char buffer[18];
+    char buffer[48];
+    char buffer_inch[12];
 
-    dist = sr04.Distance();
-    sprintf(buffer, "{\"dist_cm\": %lu}", dist);
+    dist_cm = sr04.Distance();
+    dist_inch = dist_cm * 0.393701;
+    dtostrf(dist_inch, 4, 1, buffer_inch);
+    sprintf(buffer, "{\"dist_cm\": %lu, \"dist_inch\": %s}", dist_cm, buffer_inch);
     Serial.println(buffer);
 
     delay(1000);
