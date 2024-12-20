@@ -14,3 +14,4 @@ Initial projects for this repository come from the Elegoo Super Starter Kit for 
 * 2024/10/26: lesson_11_temperature_humidity
 * 2024/11/03: lesson_12_analog_joystick
 * 2024/11/03: lesson_13_ir_remote
+* 2024/12/20: lesson_14_lcd_display

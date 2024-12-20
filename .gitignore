@@ -1,1 +1,5 @@
+.pio
 .vscode
+examples
+platformio.ini
+README
