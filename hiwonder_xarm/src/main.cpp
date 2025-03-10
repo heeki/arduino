@@ -22,6 +22,14 @@ void setHome() {
   myArm.setPosition(configuration, 6, 1000, true);
 }
 
+void setForward() {
+  Serial.println("\nsetting forward position...");
+  configuration[2].position = 2000U;
+  configuration[3].position = 2400U;
+  configuration[4].position = 1300U;
+  myArm.setPosition(configuration, 6, 1000, true);
+}
+
 void printPosition() {
   for (int i = 0; i < 6; i++) {
     char buffer[32];
@@ -91,6 +99,7 @@ void setup() {
   Serial.begin(9600);
   Serial.println("hello world!\n");
   setHome();
+  // setForward();
   printPosition();
 }
 
