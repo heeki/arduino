@@ -15,3 +15,6 @@ Initial projects for this repository come from the Elegoo Super Starter Kit for 
 * 2024/11/03: lesson_12_analog_joystick
 * 2024/11/03: lesson_13_ir_remote
 * 2024/12/20: lesson_14_lcd_display
+
+## Hiwonder xArm
+Integration with the 6DOF robotic arm, based on this (repository)[https://github.com/ccourson/Hiwonder-xArm1S].
